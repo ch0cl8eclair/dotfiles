@@ -88,9 +88,9 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-# alias ll='ls -alF'
-# alias la='ls -A'
-# alias l='ls -CF'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -116,26 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-load_aliases(){
-  if [ -f ~/.aliases ] ; then
-    source ~/.aliases
-  fi
-}
-load_profile(){
-  if [ -f ~/.profile ] ; then
-    source ~/.profile
-  fi
-}
-load_git_functions(){
-  source ~/.bashrc_git
-}
-
-
-#interactive?
-if [ ! -z PS1 ] ; then
-  # interactive
-  load_aliases
-  load_git_functions
-  load_ps1
+# Start ssh on startup
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+  eval "$(ssh-agent -s)"
+  ssh-add ~/.ssh/~/.ssh/id_ed25519
 fi
-

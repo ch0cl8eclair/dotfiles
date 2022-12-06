@@ -5,3 +5,19 @@ alias ltr="ls -ltr"
 alias ....="cd ../.."
 alias ..="cd .."
 
+if [[ "$(hostname)" == "LHRL33316" ]]; then
+	alias repos="cd /mnt/c/repositories"
+	alias envspec="cd /mnt/c/repositories/env-spec/"
+	alias workspace="cd /mnt/c/workspace"
+        alias meppel="cd /mnt/c/workspace/repositories/adaptris/meppel/"
+        alias adpcfg="cd /mnt/c/repositories/interlok-config"
+        alias adapter="cd /mnt/c/workspace/Interlok/"
+	alias winhome="cd /mnt/c/Users/klairb"
+	alias wintemp="cd /mnt/c/temp"
+	alias worknet="sudo cp /etc/resolvhome.conf /etc/resolv.conf && echo 'Now configured for home network' "
+	alias vpnnet="sudo cp /etc/resolvvpn.conf /etc/resolv.conf && echo 'Now configured for VPN network' "
+        alias vpnkit="wsl.exe -d wsl-vpnkit service wsl-vpnkit start"
+fi
+alias ackl="ack --pager='less -R'"
+#ln -s $(which fdfind) ~/.local/bin/fd
+
