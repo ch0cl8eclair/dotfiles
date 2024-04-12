@@ -10,6 +10,7 @@
     ~/.vimrc: vimrc
     ~/.bash_aliases: aliases
     ~/.gitignore: gitignore
+    ~/.tmux.conf: tmux
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
