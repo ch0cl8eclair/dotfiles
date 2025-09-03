@@ -121,3 +121,5 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
   eval "$(ssh-agent -s)"
   ssh-add ~/.ssh/~/.ssh/id_ed25519
 fi
+
+complete -C /var/lib/snapd/snap/terraform/793/terraform terraform

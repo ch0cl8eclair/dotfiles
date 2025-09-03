@@ -18,10 +18,10 @@ bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
 bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
 
 # Vim style pane selection
-#bind h select-pane -L
-#bind j select-pane -D
-#bind k select-pane -U
-#bind l select-pane -R
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
 
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'
