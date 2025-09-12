@@ -9,6 +9,7 @@
     ~/.zshrc: zshrc
     ~/.vimrc: vimrc
     ~/.bash_aliases: aliases
+    ~/.env_aliases: aliases_secondary
     ~/.gitignore: gitignore
     ~/.config/tmux/tmux.conf: config/tmux/tmux.conf
     ~/.zsh_plugins.txt: zsh_plugins.txt

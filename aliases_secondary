@@ -1,0 +1,8 @@
+alias winhome="cd /mnt/c/Users/baldev.klair/"
+alias onedrive="cd '/mnt/c/users/baldev.klair/OneDrive - Datalex/Documents'"
+alias java='java.exe'
+alias javac='javac.exe'
+alias workspace="cd /mnt/c/workspace"
+
+export JAVA_HOME="/mnt/c/MyPrograms/jdk8/"
+export GRADLE_HOME="/mnt/c/MyPrograms/gradle_8143/"

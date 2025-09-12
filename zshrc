@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -52,7 +52,7 @@ DISABLE_LS_COLORS="true"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -100,6 +100,9 @@ if [[ -e ~/.bash_aliases ]]; then
     source ~/.bash_aliases
 fi
 
+if [[ -e ~/.env_aliases ]]; then
+    source ~/.env_aliases
+fi
 # Use powerline
 USE_POWERLINE="true"
 # Source manjaro-zsh-configuration
@@ -112,14 +115,18 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
 fi
 
 # Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
+# source <(fzf --zsh)
+# source /usr/share/doc/fzf/examples/completion.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # source antidote plugin loader
 source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
-
+#prompt belak
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /var/lib/snapd/snap/terraform/793/terraform terraform
+#complete -o nospace -C /var/lib/snapd/snap/terraform/793/terraform terraform
+
+

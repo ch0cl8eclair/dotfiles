@@ -1,11 +1,16 @@
-alias ll="exa -l"
-alias llt="exa -l -T"
+alias ll="eza -l"
+alias llt="eza -l -T"
 alias lla="ls -la"
 alias ls="ls --color"
 alias ltr="ls -ltr"
-alias ....="cd ../.."
-alias ..="cd .."
+#alias ....="cd ../.."
+#alias ..="cd .."
 
-alias ackl="ack --pager='less -R'"
+# Tools
+alias fd='fdfind'
+alias bat='batcat'
+alias fzff="fzf --style full --preview 'fzf-preview.sh {}' --bind 'focus:transform-header:file --brief {}'"
+
+#alias ackl="ack --pager='less -R'"
 alias doho="cd /home/docker"
 alias hackerurls="wget -O - hackerurls.com/ascii | less"
